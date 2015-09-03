@@ -6,7 +6,6 @@
     <script type="text/javascript">
 
         //WHEN THE DOM IS LOADED CREATE THE HTML ELEMENTS
-
         var current_date = new Date();
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -14,9 +13,27 @@
         });
 
 
+        function change_button_text(){
+
+	        var button_text = prompt('what should the text be?');
+	        var all_the_buttons = document.getElementsByTagName('button');
+	        all_the_buttons[0].innerText = button_text;
+    }
+
+
+        function change_element_text(tag_name){
+
+	        var element_text = prompt('what should the text be?');
+	        var element_array = document.getElementsByTagName(tag_name);
+	       element_array[0].innerText = element_text;
+
+    }
+
+
+
     </script>
 </head>
 <body>
-
+    <button onclick='change_button_text()'></button>
 </body>
 </html>
